@@ -5,8 +5,109 @@ public class Main {
         //ahoj.pocet();
         //ahoj.zacatekAKonec();
         //ahoj.nalezSlovo();
-        ahoj.domeny();
+        //ahoj.domeny();
 
+        /*Ukol 1
+        StringBuffer sb1 = new StringBuffer("Hello");
+        sb1.append(" World");
+        System.out.println(sb1);
+        */
+        /*UKOL 2
+        StringBuffer sb2 =new StringBuffer("Javaprogramovani");
+        sb2.insert(4,'-');
+        System.out.println(sb2);
+        */
+        /*Ukol 3
+        StringBuffer sb = new StringBuffer("NevimcoDelat");
+        sb.delete(0,5);
+        System.out.println(sb);
+
+         */
+        /*Ukol 4
+        StringBuffer sb = new StringBuffer("program");
+        sb.deleteCharAt(2);
+        System.out.println(sb);
+        */
+        /*Ukol5
+        StringBuffer sb1 = new StringBuffer("Jmeno: adam,");
+        StringBuffer sb2 = new StringBuffer("vek: 18");
+        System.out.println(sb1 +" "+ sb2);
+        */
+        /*Ukol6
+        StringBuffer sb = new StringBuffer("Dobry den");
+        sb.replace(0,5,"Dobrý");
+        System.out.println(sb);
+        */
+        /*Ukol7
+        StringBuffer sb = new StringBuffer("kocka");
+        sb.replace(0,1,"K");
+        System.out.println(sb);
+    */
+
+        /*Ukol8
+        StringBuffer sb = new StringBuffer("ABCDE");
+        sb.reverse();
+        System.out.println(sb.toString());
+    */
+        /*Ukol9
+        StringBuffer sb = new StringBuffer("Moje auto je modre auto");
+        System.out.println(sb.indexOf("auto"));
+
+         */
+        /*Ukol10
+        StringBuffer sb = new StringBuffer("Informatika");
+
+        System.out.println(sb.substring(0,5));
+         */
+        /*Ukol11
+        StringBuffer sb = new StringBuffer(3);
+        sb.append("Hello");
+
+        System.out.println(sb.toString());
+         */
+        /*Ukol12
+        StringBuffer sb = new StringBuffer("Test");
+        System.out.println(sb.length()+" "+ sb.capacity());
+        sb.trimToSize();
+
+        System.out.println(sb.length()+" "+ sb.capacity());
+         */
+        /*Ukol 13
+        StringBuffer sb = new StringBuffer("Cena je 345 korun");
+
+        char firstDigit = 0;
+
+        for (int i = 0; i < sb.length(); i++) {
+            if (Character.isDigit(sb.charAt(i))) {
+                firstDigit = sb.charAt(i);
+                break;
+            }
+        }
+
+        System.out.println("První číslice v textu je: " + firstDigit);
+         */
+        /*Ukol14*/
+        StringBuffer sb = new StringBuffer("Hodnota: 50 korun.");
+        //sb.trimToSize();
+        String cislo= "0123456789";
+        String c ="";
+        int zacatek=0;
+        int konec=0;
+        for(int i = 0; i < sb.length(); i++){
+            if(Character.isDigit(sb.charAt(i))){
+                c+=sb.charAt(i);
+                zacatek=i;
+                for(int j = i; j < sb.length(); j++){
+                    if(Character.isAlphabetic(sb.charAt(j))){
+                        konec=j-1;
+                    }
+                }
+            }
+        }
+        int dvojnasobek =Integer.valueOf(c)*2;
+
+        sb.replace(zacatek,konec,c);
+        System.out.println(sb);
 
     }
 }
