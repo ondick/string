@@ -1,5 +1,8 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         Ahoj ahoj = new Ahoj();
         //ahoj.prevod();
         //ahoj.pocet();
@@ -86,7 +89,7 @@ public class Main {
 
         System.out.println("První číslice v textu je: " + firstDigit);
          */
-        /*Ukol14*/
+        /*Ukol14
         StringBuffer sb = new StringBuffer("Hodnota: 50 korun.");
         //sb.trimToSize();
         String cislo= "0123456789";
@@ -107,7 +110,64 @@ public class Main {
         int dvojnasobek =Integer.valueOf(c)*2;
 
         sb.replace(zacatek,konec,c);
-        System.out.println(sb);
+        System.out.println(sb);*/
+
+
+        //KOMPLIOVANE UKOLY
+
+        /*Ukol1
+        long start = System.currentTimeMillis();
+        StringBuffer sb = new StringBuffer("");
+        for (int i = 1; i <= 100000; i++) {
+            sb.insert(0,'x');
+        }
+        long end = System.currentTimeMillis();
+        System.out.println(end-start);
+
+        long start1 = System.currentTimeMillis();
+        String x="";
+        for (int i = 1; i <= 100000; i++) {
+            x=x+"x";
+        }
+        long end1 = System.currentTimeMillis();
+        System.out.println(end1-start1);
+
+         */
+
+        /*Ukol2*/
+        boolean power = true;
+        while(power) {
+            System.out.println("Zadejte slovo: ");
+            String x = sc.nextLine();
+            String z ="";
+            String a="";
+            StringBuffer sb = new StringBuffer(x);
+            for (int i=0;i<sb.length();i++){
+                if (i==sb.length()-1){
+                    z = String.valueOf(sb.charAt(i));
+                }
+            }
+            System.out.println(z);
+
+            System.out.println("zadejte slovo: ");
+            String y = sc.nextLine();
+            StringBuffer sb1 = new StringBuffer(y);
+            for (int j=0;j<sb1.length();j++){
+                if(j==0){
+                    a = String.valueOf(sb.charAt(j));
+                }
+            }
+            System.out.println(a);
+
+            if (z.equals(a)){
+                System.out.println("jedeme dál");
+            }
+            else{power = false;}
+        }
+
+
+
+
 
     }
 }
