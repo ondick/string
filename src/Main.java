@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+
+
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -134,7 +136,7 @@ public class Main {
 
          */
 
-        /*Ukol2*/
+        /*Ukol2
         boolean power = true;
         while(power) {
             System.out.println("Zadejte slovo: ");
@@ -164,6 +166,73 @@ public class Main {
             }
             else{power = false;}
         }
+        */
+        /*ukol1*/
+        StringBuilder sb = new StringBuilder("java je objektovy jazyk");
+        sb.setCharAt(0, Character.toUpperCase(sb.charAt(0)));
+        for(int i = 0; i<sb.length(); i++){
+            if(sb.charAt(i)==' '){
+                sb.replace(i,i+1,"|");
+
+            }
+            if(sb.charAt(i)=='|'){
+                sb.setCharAt(i+1,Character.valueOf(sb.charAt(i+1)).toUpperCase(sb.charAt(i+1)));
+            }
+        }System.out.println(sb);
+
+
+        /*Ukol5
+
+        StringBuffer sb = new StringBuffer("J4av8a 2S0t1r3i5n6g");
+        for(int i = 0; i<sb.length(); i++){
+            if(Character.isDigit(sb.charAt(i))){
+                sb.deleteCharAt(i);
+            }
+        }
+        System.out.println(sb);
+        */
+        /*Ukol6
+        StringBuffer sb = new StringBuffer("((a+b)*(c+d");
+        int oteviraci = 0;
+        int uzaviraci = 0;
+        for (int i = 0; i < sb.length(); i++) {
+            if (sb.charAt(i) == '(') {
+                oteviraci++;
+            }
+            if (sb.charAt(i) == ')') {
+                uzaviraci++;
+            }
+        }
+
+        if (oteviraci > uzaviraci) {
+            for (int i = 0; i < oteviraci-uzaviraci; i++) {
+                sb.append(")");
+            }
+        }
+        System.out.println(sb.toString());
+        */
+        /*ukol7
+        StringBuilder sb = new StringBuilder("java");
+        StringBuilder sb2 = new StringBuilder(sb);
+        sb2.reverse();
+        sb.append(sb2);
+        System.out.println(sb);
+        */
+        /*ukol8*/
+        /*ukol9
+        StringBuilder sb = new StringBuilder("aaabbbcccca");
+        StringBuilder sb1 = new StringBuilder();
+        int pocet = 1;
+
+        for (int i = 0; i < sb.length(); i++) {
+            if (i + 1 < sb.length() && sb.charAt(i) == sb.charAt(i + 1)) {
+                pocet++;
+            } else {
+                sb1.append(sb.charAt(i));
+                sb1.append(pocet);
+                pocet = 1;
+            }
+        }System.out.println(sb1);*/
 
 
 
